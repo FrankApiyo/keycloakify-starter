@@ -1,0 +1,48 @@
+:root {
+  --primary-color: #1fafe9;
+  --secondary-color: #313b48;
+  --text-color-white: white;
+  --font-size-default: 16px;
+  --font-size-hidden: 0;
+}
+
+form#kc-form-login {
+    display: none;
+}
+
+div[data-kc-msg="loginAccountTitle"] {
+    font-size: var(--font-size-hidden); /* hide the original text */
+}
+
+div[data-kc-msg="loginAccountTitle"]::before {
+    content: "Sign in or register with:"; /* new text */
+    font-size: var(--font-size-default); /* make it visible */
+    display: block;
+}
+
+div[data-kc-msg="loginTitleHtml"] {
+  color: var(--text-color-white);
+}
+
+div[class="kcFormCardClass card-pf"] {
+  border-color: var(--secondary-color);
+}
+
+.pf-c-button {
+  --pf-c-button--m-control--hover--after--BorderBottomColor: var(--secondary-color) !important;
+}
+
+#kc-social-providers > h2, #kc-social-providers > hr {
+  display: none;
+}
+
+.login-pf body {
+    background: var(--primary-color) !important;
+    background-size: cover; /* Optional: you can remove this if not needed */
+    height: 100%; /* Retain the height */
+}
+
+span.kcFormSocialAccountNameClass.kc-social-provider-name.kc-social-icon-text:hover {
+    color: var(--primary-color) !important;
+}
+
